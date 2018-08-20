@@ -1,0 +1,52 @@
+@import "_variables";
+
+// Button
+@mixin btn-style($color) {
+  background-color: $color;
+  border-color: $color;
+  transition: all ease-in-out .3s;
+  &:hover {
+    background-color: darken($color, 10%);
+    border-color: darken($color, 10%);
+  }
+}
+
+
+// Grid
+@mixin row-flex-justify($justify) {
+  @if $justify == flex-start or $justify == flex-end {
+    .row-#{$justify}{
+      justify-content: $justify;
+    }
+  } @else {
+    .row-flex-#{$justify}{
+      justify-content: $justify;
+    }
+  }
+}
+
+@mixin create-cols($number) {
+  .col-#{$number}{
+    width: $number/$total-grid*100%;
+  }
+}
+
+@mixin create-responsive-cols($number) {
+  @each $name in $breakpoint-name {
+    @if map-has-key($breakpoints,$name) {
+      @if $name == xs {
+        @media (max-width: #{map-get($breakpoints,$name)}){
+          .col-#{$name}-#{$number}{
+            width: $number/$total-grid*100%;
+          }
+        }
+      } @else{
+        @media (min-width: #{map-get($breakpoints,$name)}){
+          .col-#{$name}-#{$number}{
+            width: $number/$total-grid*100%;
+          }
+        }
+      }
+    }
+  }
+}

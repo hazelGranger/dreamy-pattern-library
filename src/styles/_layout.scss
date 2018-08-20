@@ -1,0 +1,29 @@
+@import "_variables.scss";
+@import "_color.scss";
+
+.main--layout-horizonal{
+  display: flex;
+  flex-direction: row;
+}
+
+.main--layout-vertical{
+  display: flex;
+  flex-direction: column;
+}
+
+header{
+  height: 80px;
+}
+
+.page{
+  width: 100%;
+  margin-right: $contents-margin-right;
+}
+
+.page__title{
+  color: $white;
+}
+
+.page__descr{
+  color: $white;
+}

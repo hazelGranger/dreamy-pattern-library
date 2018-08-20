@@ -1,0 +1,57 @@
+@import "_mixin.scss";
+@import "_color.scss";
+// Row
+.row{
+  display: block;
+  position: relative;
+}
+
+.row-flex{
+  display: flex;
+}
+
+.row-flex-align-top{
+  align-items: flex-start;
+}
+
+.row-flex-align-middle{
+  align-items: center;
+}
+
+.row-flex-align-bottom{
+  align-items: flex-end;
+}
+
+@include row-flex-justify(flex-start);
+@include row-flex-justify(center);
+@include row-flex-justify(flex-end);
+@include row-flex-justify(space-around);
+@include row-flex-justify(space-between);
+
+
+
+// Col
+@for $i from 1 to $total-grid + 1 {
+  @include create-cols($i);
+}
+
+@for $i from 1 to $total-grid + 1 {
+  @include create-responsive-cols($i);
+}
+
+
+//display
+.row-display{
+  background-image: linear-gradient(90deg, $white 50%, darken($white, 5%) 0);
+  background-size: 1/($total-grid/2)*100% 100%;
+  padding: 10px 0;
+}
+
+.col-display{
+  background: rgba($green, .6);
+  text-align: center;
+}
+
+.col-display-flex{
+  padding: 20px 0;
+}

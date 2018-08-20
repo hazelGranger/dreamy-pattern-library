@@ -1,0 +1,31 @@
+// Common
+$border-radius: .25em;
+
+$common-padding: .25em 1em;
+
+$text-indient: 1em;
+
+$title-weight: 300;
+
+$title-letter-spacing: .1em;
+
+$link-color: #4D9DD7;
+
+$common-transition: all ease-in-out .3s;
+
+// nav
+$nav-margin: 30px;
+$nav-item-padding: .25em 2em;
+
+//contents
+$contents-margin-right: 30px;
+
+// Button
+$btn-padding: .4em .8em;
+$btn-border-width: 1px;
+$btn-fontsize: 1rem;
+
+// Grid
+$total-grid: 12;
+$breakpoints: ('xl': 1200px, 'lg': 992px, 'md': 768px, 'sm': 576px, 'xs': 576px);
+$breakpoint-name: xl lg md sm xs;

@@ -1,0 +1,29 @@
+@import "_color.scss";
+@import "_variables.scss";
+
+.nav{
+  margin: 0 $nav-margin;
+}
+
+.nav__item{
+  border-radius: $border-radius;
+  a{
+    color: $white;
+  }
+  &>a{
+    text-indent: $text-indient;
+    display: block;
+  }
+}
+
+.subnav{
+
+}
+
+.subnav__item{
+  border-radius: $border-radius;
+  padding: $nav-item-padding;
+  &:hover{
+    background-color: $transparent-hover-bg;
+  }
+}

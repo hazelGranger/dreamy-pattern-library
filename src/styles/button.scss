@@ -1,0 +1,45 @@
+@import "_color.scss";
+@import "_variables.scss";
+@import "_mixin.scss";
+
+.btn{
+  box-shadow: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+  padding: $btn-padding;
+  color: $white;
+  border-style: solid;
+  border-width: $btn-border-width;
+}
+
+
+//size
+.btn-large{
+  font-size: $btn-fontsize * 1.25;
+}
+
+.btn-medium{
+  font-size: $btn-fontsize;
+}
+
+.btn-small{
+  font-size: $btn-fontsize / 1.25;
+}
+
+//usage
+
+.btn-default{
+  @include btn-style($blue);
+}
+
+.btn-success{
+  @include btn-style($green);
+}
+
+.btn-warning{
+  @include btn-style($yellow);
+}
+
+.btn-danger{
+  @include btn-style($red);
+}
