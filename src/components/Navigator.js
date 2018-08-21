@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import 'styles/navigator.css';
+import 'styles/navigator.scss';
 
 class Navigator extends Component {
   render(){
@@ -54,7 +54,7 @@ class Navigator extends Component {
             <Link to="/button">Data Display</Link>
             <ul className="subnav">
               <li className="subnav__item">
-                <Link to="/button">Card</Link>
+                <Link to="/card">Card</Link>
               </li>
               <li className="subnav__item">
                 <Link to="/button">Collapse</Link>

@@ -1,0 +1,15 @@
+@import "_variables.scss";
+@import "_color.scss";
+
+.card{
+  background: $white;
+  border-radius: $border-radius;
+  padding: $card-padding;
+}
+
+.card__title{
+  color: $gray;
+  font-weight: bold;
+}
+
+//

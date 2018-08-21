@@ -40,24 +40,24 @@ class GridPage extends Component{
 
         <h3 className="page__subtitle">Based on Flex layout</h3>
         <p className="page__paragraphs">Flex start</p>
-        <Row type="flex" align="" justify="start" className="row-display">
+        <Row type="flex" align="middle" justify="start" className="row-display">
           { gridFlex }
         </Row>
         <p className="page__paragraphs">Flex end</p>
-        <Row type="flex" align="" justify="end" className="row-display">
+        <Row type="flex" align="middle" justify="end" className="row-display">
           { gridFlex }
         </Row>
         <p className="page__paragraphs">Space between</p>
-        <Row type="flex" align="" justify="space-between" className="row-display">
+        <Row type="flex" align="middle" justify="space-between" className="row-display">
           { gridFlex }
         </Row>
         <p className="page__paragraphs">Space around</p>
-        <Row type="flex" align="" justify="space-around" className="row-display">
+        <Row type="flex" align="middle" justify="space-around" className="row-display">
           { gridFlex }
         </Row>
 
         <h3 className="page__subtitle">Responsive Grid</h3>
-        <Row type="flex" align="" justify="start" className="row-display">
+        <Row type="flex" align="middle" justify="start" className="row-display">
           { gridResponsive }
         </Row>
       </div>

@@ -5,6 +5,7 @@ import Navigator from 'components/Navigator'
 
 import Buttons from 'pages/Buttons'
 import GridPage from 'pages/GridPage'
+import CardPage from 'pages/CardPage'
 
 class Main extends Component {
   render() {
@@ -14,6 +15,7 @@ class Main extends Component {
           <Navigator />
           <Route path="/button" component={Buttons} />
           <Route path="/grid" component={GridPage} />
+          <Route path="/card" component={CardPage} />
         </main>
       </Router>
     );

@@ -7,7 +7,7 @@ class Row extends Component{
         alignClassname = " row-flex-align-",
         justifyClassname = " row-flex-";
     if (type === "flex") {
-      classNames = "row-flex"
+      classNames += " row-flex";
       if (align) {
         classNames += alignClassname + align;
       }
