@@ -1,3 +1,4 @@
+@import "_color.scss";
 // Common
 $border-radius: .25em;
 
@@ -35,3 +36,5 @@ $col-gap: 15px;
 
 // Card
 $card-padding: .5em 1em;
+$card-margin: 15px;
+$card-inner-boder: 1px solid darken($white,15%);

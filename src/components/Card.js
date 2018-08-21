@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 
 class Card extends Component {
   render(){
-    const {title, children} = this.props;
+    const {title, children, type} = this.props;
+    let classNames = "card" + (type==="inner"? " card-inner":"");
     return(
-      <section className="card">
-        <h3 className="card__title">title</h3>
+      <div className={classNames}>
+        <h3 className="card__title">{title}</h3>
         { children }
-      </section>
+      </div>
     );
   }
 }

@@ -5,11 +5,21 @@
   background: $white;
   border-radius: $border-radius;
   padding: $card-padding;
+  margin-bottom: $card-margin;
 }
 
 .card__title{
   color: $gray;
   font-weight: bold;
+}
+
+.card-inner{
+  background: darken($white, 4%);
+  border: $card-inner-boder;
+
+  & .card__title{
+    font-size: smaller;
+  }
 }
 
 //
