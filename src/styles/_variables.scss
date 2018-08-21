@@ -18,7 +18,9 @@ $nav-margin: 30px;
 $nav-item-padding: .25em 2em;
 
 //contents
-$contents-margin-right: 30px;
+$pages-margin-right: 30px;
+$pages-padding-bottom: 60px;
+
 
 // Button
 $btn-padding: .4em .8em;
@@ -27,5 +29,5 @@ $btn-fontsize: 1rem;
 
 // Grid
 $total-grid: 12;
-$breakpoints: ('xl': 1200px, 'lg': 992px, 'md': 768px, 'sm': 576px, 'xs': 576px);
-$breakpoint-name: xl lg md sm xs;
+$breakpoints: ('xs': 575px, 'sm': 767px, 'md': 991px, 'lg': 1199px,'xl': 1200px);
+$breakpoint-name: xs sm md lg xl;

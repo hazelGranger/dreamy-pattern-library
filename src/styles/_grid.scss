@@ -8,6 +8,7 @@
 
 .row-flex{
   display: flex;
+  flex-wrap: wrap;
 }
 
 .row-flex-align-top{
@@ -50,6 +51,9 @@
 .col-display{
   background: rgba($green, .6);
   text-align: center;
+  &:nth-child(even){
+    background: rgba(lighten($green, 20%), .6);
+  }
 }
 
 .col-display-flex{

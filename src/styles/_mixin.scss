@@ -34,14 +34,14 @@
 @mixin create-responsive-cols($number) {
   @each $name in $breakpoint-name {
     @if map-has-key($breakpoints,$name) {
-      @if $name == xs {
-        @media (max-width: #{map-get($breakpoints,$name)}){
+      @if $name == xl {
+        @media (min-width: #{map-get($breakpoints,$name)}){
           .col-#{$name}-#{$number}{
             width: $number/$total-grid*100%;
           }
         }
       } @else{
-        @media (min-width: #{map-get($breakpoints,$name)}){
+        @media (max-width: #{map-get($breakpoints,$name)}){
           .col-#{$name}-#{$number}{
             width: $number/$total-grid*100%;
           }

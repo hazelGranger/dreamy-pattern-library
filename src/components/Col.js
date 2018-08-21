@@ -6,7 +6,7 @@ class Col extends Component{
     let classNames = "col";
 
     for (let attr in this.props){
-      if (attr && attr!="children" && attr!="className") {
+      if (attr && attr!=="children" && attr!=="className") {
         if (attr !== 'span') {
           classNames += " col-" + attr + '-' + this.props[attr];
         } else{

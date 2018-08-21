@@ -17,13 +17,18 @@ header{
 
 .page{
   width: 100%;
-  margin-right: $contents-margin-right;
+  margin-right: $pages-margin-right;
+  padding-bottom: $pages-padding-bottom;
 }
 
 .page__title{
   color: $white;
 }
 
-.page__descr{
+.page__subtitle{
+  color: $white;
+}
+
+.page__paragraphs{
   color: $white;
 }
