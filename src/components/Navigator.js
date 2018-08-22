@@ -14,6 +14,9 @@ class Navigator extends Component {
               <li className="subnav__item">
                 <Link to="/grid">Grid</Link>
               </li>
+              <li className="subnav__item">
+                <Link to="/card">Card</Link>
+              </li>
             </ul>
           </li>
           <li className="nav__item">
@@ -53,9 +56,6 @@ class Navigator extends Component {
           <li className="nav__item">
             <Link to="/button">Data Display</Link>
             <ul className="subnav">
-              <li className="subnav__item">
-                <Link to="/card">Card</Link>
-              </li>
               <li className="subnav__item">
                 <Link to="/button">Collapse</Link>
               </li>

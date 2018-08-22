@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Navigator from 'components/Navigator'
 
-import Buttons from 'pages/Buttons'
+import ButtonPage from 'pages/ButtonPage'
 import GridPage from 'pages/GridPage'
 import CardPage from 'pages/CardPage'
 
@@ -13,7 +13,7 @@ class Main extends Component {
       <Router>
         <main className="main--layout-horizonal">
           <Navigator />
-          <Route path="/button" component={Buttons} />
+          <Route path="/button" component={ButtonPage} />
           <Route path="/grid" component={GridPage} />
           <Route path="/card" component={CardPage} />
         </main>

@@ -18,6 +18,8 @@ $link-color: #4D9DD7;
 
 $common-transition: all ease-in-out .3s;
 
+$common-line-height: 1.5;
+
 // nav
 $nav-margin: 30px;
 $nav-item-padding: .25em 2em;
@@ -31,6 +33,7 @@ $pages-padding-bottom: 60px;
 $btn-padding: .4em .8em;
 $btn-border-width: 1px;
 $btn-fontsize: 1rem;
+$btn-font-weight: 400;
 
 // Grid
 $total-grid: 12;
@@ -40,5 +43,5 @@ $col-gap: 15px;
 
 // Card
 $card-padding: .5em 1em;
-$card-margin: 15px;
+$card-margin: 30px;
 $card-inner-boder: 1px solid darken($white,15%);

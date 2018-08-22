@@ -10,6 +10,13 @@
   color: $white;
   border-style: solid;
   border-width: $btn-border-width;
+  display: inline-block;
+  font-weight: $btn-font-weight;
+  line-height: $common-line-height;
+  &:hover{
+    text-decoration: none;
+    color: $white;
+  }
 }
 
 
@@ -26,7 +33,7 @@
   font-size: $btn-fontsize / 1.25;
 }
 
-//usage
+//theme
 
 .btn-default{
   @include btn-style($blue);
@@ -42,4 +49,14 @@
 
 .btn-danger{
   @include btn-style($red);
+}
+
+//display
+
+.button-display{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80px;
 }

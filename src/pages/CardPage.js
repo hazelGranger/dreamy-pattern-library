@@ -7,36 +7,33 @@ import Card from 'components/Card';
 
 class CardPage extends Component {
   render(){
+    const article = (
+      <article>
+        <p>This is a Card</p>
+        <p>Just very concise</p>
+        <p>You can add other elements in!</p>
+      </article>
+    );
     return(
       <Page title="Card">
-        <Row className="row-with-gap-col">
+        <Row>
           <Col span={4}>
             <Card title="Card Title">
-              <article>
-                <p>This is a Card</p>
-                <p>Just very concise</p>
-                <p>You can add other elements in!</p>
-              </article>
+              { article }
             </Card>
           </Col>
           <Col span={6}>
             <Card title="Card Title">
-              <article>
-                <p>This is another Card</p>
-                <p>Just very concise</p>
-                <p>You can add other elements in!</p>
-              </article>
+              { article }
             </Card>
           </Col>
         </Row>
-        <Row className="row-with-gap-col">
+        <Row>
           <Col span={4}>
             <Card title="Card Title">
               <Card type="inner" title="Inner Card Title">
                 <article>
-                  <p>This is a Card</p>
-                  <p>Just very concise</p>
-                  <p>You can add other elements in!</p>
+                  <p>This is a Inner Card</p>
                 </article>
               </Card>
             </Card>
@@ -45,7 +42,7 @@ class CardPage extends Component {
             <Card title="Card Title">
               <Card type="inner" title="Inner Card Title">
                 <article>
-                  <p>This is a Card</p>
+                  <p>This is a Inner Card</p>
                 </article>
               </Card>
               <Card type="inner" title="Inner Card Title">
