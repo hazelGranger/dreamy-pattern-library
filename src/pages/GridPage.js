@@ -26,7 +26,7 @@ class GridPage extends Component{
       for (var i = 1; i <= 4; i++) {
         gridResponsive.push(
           <Col xl={2} lg={3} md={4} sm={6} xs={12} className="col-display col-display-flex" key={i}>
-            <p>col-lg-3 <br/> col-md-4 <br/> col-sm-6 <br/> col-xs-12</p>
+            <p>col-xl-2 <br/>col-lg-3 <br/> col-md-4 <br/> col-sm-6 <br/> col-xs-12</p>
           </Col>
         )
       }
