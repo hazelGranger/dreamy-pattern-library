@@ -26,7 +26,7 @@ class Navigator extends Component {
                 <Link to="/button">Button</Link>
               </li>
               <li className="subnav__item">
-                <Link to="/button">Icon</Link>
+                <Link to="/icon">Icon</Link>
               </li>
             </ul>
           </li>

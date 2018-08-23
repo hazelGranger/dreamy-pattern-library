@@ -10,3 +10,36 @@
 .bg--theme-twilight{
   background-image: linear-gradient(#3f3fbb, #bd9166);
 }
+
+
+//icon
+.icon-display{
+  padding: 15px;
+  margin: 5px 0;
+  //font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: $border-radius;
+  transition: $common-transition;
+  &:hover{
+    background: $green;
+    transform: scale(1.1);
+    & .icon{
+      color: $white;
+    }
+    & .icon-name{
+      color: $white;
+    }
+  }
+  & .icon{
+    font-size: 30px;
+    transition: $common-transition;
+    color: $gray;
+  }
+}
+
+  .icon-name{
+    font-size: .875rem;
+    color: $gray;
+  }
