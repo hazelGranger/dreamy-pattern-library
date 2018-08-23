@@ -34,7 +34,7 @@ class Navigator extends Component {
             <Link to="/button">Data Entry</Link>
             <ul className="subnav">
               <li className="subnav__item">
-                <Link to="/button">Form</Link>
+                <Link to="/form">Form</Link>
               </li>
               <li className="subnav__item">
                 <Link to="/button">Input</Link>
