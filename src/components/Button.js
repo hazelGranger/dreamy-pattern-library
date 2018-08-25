@@ -4,7 +4,7 @@ import 'styles/button.css';
 
 class Button extends Component{
   render(){
-    const {type,size,theme,text,link} = this.props;
+    const {type,size,theme,text,link,className} = this.props;
     let classNames = "btn";
 
     if (!size || (size!=="large" && size!=="small") ) {
@@ -25,7 +25,7 @@ class Button extends Component{
       );
     }else{
       return(
-        <button className={classNames}>{ text?text:"" }</button>
+        <button className={classNames + " " + className}>{ text?text:"" }</button>
       );
     }
   }

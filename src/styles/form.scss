@@ -1,0 +1,49 @@
+@import "_variables";
+@import "_color";
+
+// Input
+.input{
+  display: inline-block;
+  width: 100%;
+  height: $input-height;
+  padding: $common-padding;
+  border: $input-border;
+  border-radius: $border-radius;
+  background-color: $white;
+  box-shadow: $input-box-shadow;
+  font-size: $input-fontsize;
+  margin-bottom: $common-margin;
+  -webkit-appearance: none;
+}
+
+.input-lg{
+  height: $input-height*(4/3);
+  font-size: $input-fontsize*(4/3);
+}
+
+.input-sm{
+  height: $input-height*(2/3);
+  font-size: $input-fontsize*(2/3);
+}
+
+// input-search
+
+.input-search-container{
+  position: relative;
+}
+
+.input-search-button{
+  position: absolute;
+  right: 0;
+  height: $input-height;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.input-lg+.input-search-button{
+  height: $input-height*(4/3);
+}
+
+.input-sm+.input-search-button{
+  height: $input-height*(2/3);
+}
