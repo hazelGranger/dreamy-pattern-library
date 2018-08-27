@@ -15,7 +15,8 @@ class Input extends Component{
 
   state = {
     email: "",
-    emaillist: []
+    emaillist: [],
+    emailReminderVisibility: false
   }
 
   componentWillMount() {
@@ -27,11 +28,21 @@ class Input extends Component{
   }
 
   remindEmail= (e)=>{
-    this.setState({email: e.target.value},()=>{
-      if (this.props.emailreminder) {
+
+    this.setState({
+      email: e.target.value
+    },()=>{
+      if (this.state.email && this.state.email.indexOf("@")===-1) {
+        //input email has value,but not include "@"
         this.setState({
+          emailReminderVisibility: true,
           emaillist: this.renderEmailList()
         })
+      } else{
+        //input no value or has "@"
+        this.setState({
+          emailReminderVisibility: false
+        });
       }
     });
   }
@@ -42,6 +53,13 @@ class Input extends Component{
       emailList = this.props.emailreminder.map((emailname) => this.state.email+"@"+emailname);
     }
     return emailList;
+  }
+
+  selectedEmail = (selected) =>{
+    this.setState({
+      email: selected,
+      emailReminderVisibility: false
+    })
   }
 
   render(){
@@ -61,12 +79,21 @@ class Input extends Component{
       );
     } else if (type==="email") {
 
-      return(
-        <span className="input-email-container">
-          <input onChange={this.remindEmail} className={classNames} placeholder={placeholder} defaultValue={defaultValue} type="text"/>
-          <Dropdown className="input-email-reminer" items={this.state.emaillist} changeItems={this.remindEmail}   />
-        </span>
-      );
+      if (this.state.selectedEmail) {
+        return(
+          <span className="input-email-container">
+            <input onChange={this.remindEmail} className={classNames} placeholder={placeholder} defaultValue={defaultValue} onchange={this.handleChange} value={this.state.email} type="text"/>
+          </span>
+        )
+      }else{
+        return(
+          <span className="input-email-container">
+            <input onChange={this.remindEmail} className={classNames} placeholder={placeholder} defaultValue={defaultValue} value={this.state.email} type="text"/>
+            <Dropdown className="input-email-reminer" visibility={this.state.emailReminderVisibility} items={this.state.emaillist} handleSelect={this.selectedEmail}   />
+          </span>
+        );
+      }
+
     } else{
       return(
         <input className={classNames} type={type} placeholder={placeholder} defaultValue={defaultValue} />

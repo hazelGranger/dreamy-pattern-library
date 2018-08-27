@@ -49,15 +49,44 @@
   height: $input-height*(2/3);
 }
 
-.input-email-reminer{
+// .input-email-reminer{
+//   position: absolute;
+//   top: 100%;
+//   left: 0;
+//   width: 100%;
+//   padding: $common-padding;
+//   background: $white;
+//   box-shadow: $common-boxshadow;
+//   border: $input-border;
+//   border-radius: $border-radius;
+//   z-index: 1;
+// }
+
+//Dropdown
+.dropdown-conatainer{
+  position: relative;
+  display: inline-block;
+}
+.dropdown{
   position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
-  padding: $common-padding;
+  padding: .5em 0;
   background: $white;
   box-shadow: $common-boxshadow;
   border: $input-border;
   border-radius: $border-radius;
   z-index: 1;
+  & li{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 1em;
+    cursor: pointer;
+    &:hover{
+      background-color: $blue;
+      color: $white;
+    }
+  }
 }
