@@ -11,6 +11,7 @@ import TextArea from 'components/TextArea';
 
 class FormPage extends Component{
   render(){
+    const emailreminder = ['gmail.com','qq.com','163.com','yahoo.com'];
     return(
       <Page title="Form Elements">
         <Row type="flex">
@@ -28,7 +29,7 @@ class FormPage extends Component{
                 <p>Input number</p>
                 <Input type="number" placeholder="type a number" />
                 <p>Input Email</p>
-                <Input type="email" />
+                <Input type="email" emailreminder={emailreminder} placeholder="input an Email address" />
                 <p>Input Search</p>
                 <Input type="search" placeholder="input search text" />
                 <Input type="search" size="lg" placeholder="input search text" />

@@ -12,7 +12,7 @@
   background-color: $white;
   box-shadow: $input-box-shadow;
   font-size: $input-fontsize;
-  margin-bottom: $common-margin;
+  // margin-bottom: $common-margin;
   -webkit-appearance: none;
 }
 
@@ -26,10 +26,11 @@
   font-size: $input-fontsize*(2/3);
 }
 
-// input-search
+// input-search input-email
 
-.input-search-container{
+.input-search-container,.input-email-container{
   position: relative;
+  display: inline-block;
 }
 
 .input-search-button{
@@ -46,4 +47,17 @@
 
 .input-sm+.input-search-button{
   height: $input-height*(2/3);
+}
+
+.input-email-reminer{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: $common-padding;
+  background: $white;
+  box-shadow: $common-boxshadow;
+  border: $input-border;
+  border-radius: $border-radius;
+  z-index: 1;
 }
