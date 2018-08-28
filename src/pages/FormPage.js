@@ -8,6 +8,7 @@ import Icon from 'components/Icon';
 
 import Input from 'components/Input';
 import TextArea from 'components/TextArea';
+import Radio from 'components/Radio'
 
 class FormPage extends Component{
   render(){
@@ -40,7 +41,20 @@ class FormPage extends Component{
           </Col>
           <Col span={6}>
             <Card title="Radio">
-
+                <p>Radios Horizonal display</p>
+                <div className="input-radio-group input-radio-group-horizonal">
+                  <Radio text="A" name="Q1" id="a" />
+                  <Radio text="B" name="Q1" id="b" />
+                  <Radio text="C" name="Q1" id="c" />
+                  <Radio text="D" name="Q1" id="d" />
+                </div>
+                <p>Radios Vertical display</p>
+                <div className="input-radio-group input-radio-group-vertical">
+                  <Radio text="I like it a lot!" name="Q2" id="a1" type="primary" />
+                  <Radio text="I like it a little!" name="Q2" id="b2" type="primary" />
+                  <Radio text="I have no feeling for it!" name="Q2" id="c2" type="primary" />
+                  <Radio text="I dislike it!" name="Q2" id="d2" type="primary" />
+                </div>
             </Card>
           </Col>
           <Col span={6}>
