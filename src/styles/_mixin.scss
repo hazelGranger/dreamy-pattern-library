@@ -50,3 +50,21 @@
     }
   }
 }
+
+@mixin create-input-checkbox-theme() {
+  @each $theme in $themes {
+    @if map-has-key($input-theme-color,$theme) {
+      .input-checkbox-#{$theme}{
+          & + label::before{
+            border-color: map-get($input-theme-color,$theme);
+          }
+          & + label::after{
+            color: $white;
+          }
+          &:checked + label::before{
+            background: map-get($input-theme-color,$theme);
+          }
+      }
+    }
+  }
+}

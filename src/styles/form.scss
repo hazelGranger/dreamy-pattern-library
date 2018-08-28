@@ -1,5 +1,6 @@
 @import "_variables";
 @import "_color";
+@import "_mixin";
 
 // Input
 .input{
@@ -128,7 +129,6 @@
       background-color: $white;
       border-radius: 50%;
       margin-left: -1rem;
-      margin-right: .5rem;
       margin-top: 5px;
     }
     &::after{
@@ -143,7 +143,6 @@
       background-color: lighten($gray, 10%);
       border-radius: 50%;
       margin-left: -1rem;
-      margin-right: .5rem;
       margin-top: 5px;
       transform: scale(0,0);
       transition: $common-transition;
@@ -164,6 +163,76 @@
     transform: scale(1,1);
   }
 }
+
+//Checkbox
+
+.input-checkbox-group{
+  display: flex;
+  & .input-checkbox-container{
+    flex: 1;
+  }
+}
+
+.input-checkbox-group-vertical{
+  flex-direction: column;
+}
+
+.input-checkbox{
+  cursor: pointer;
+  opacity: 0;
+  & + label{
+    position: relative;
+    vertical-align: middle;
+    padding-left: .5rem;
+    cursor: pointer;
+    &::before{
+      content: '';
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border: 1px solid #6f6f6f;
+      position: absolute;
+      left: 0;
+      border-radius: $border-radius;
+      margin-left: -1rem;
+      margin-top: 5px;
+      transition: $common-transition;
+    }
+    &::after{
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      left: 0;
+      margin-left: -.9rem;
+      margin-top: 3px;
+      color: #606060;
+      font-weight: bold;
+      transition: $common-transition;
+    }
+  }
+}
+
+.input-checkbox:checked{
+  & + label::after{
+    content: '\e632';
+    font-family: "icon";
+  }
+}
+
+@include create-input-checkbox-theme();
+
+// .input-checkbox-primary{
+//     & + label::before{
+//       border-color: $blue;
+//     }
+//     & + label::after{
+//       color: $white;
+//     }
+//     &:checked + label::before{
+//       background: $blue;
+//     }
+// }
 
 
 

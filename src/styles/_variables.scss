@@ -56,3 +56,5 @@ $input-border: 1px solid darken($white,20%);
 $input-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
 $input-fontsize: 14px;
 $input-height: 36px;
+$input-theme-color: ('primary': $blue, 'success': $green, 'warning': $yellow, 'danger': $red, 'info': $cyan);
+$themes: primary success warning danger info;
