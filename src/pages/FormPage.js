@@ -19,20 +19,20 @@ class FormPage extends Component{
             <Card title="Input">
               <Card title="Input text" type="inner">
                 <p>Default size with placeholder</p>
-                <Input size="default" placeholder="type your name" />
+                <Input className="input-display" size="default" placeholder="type your name" />
                 <p>Large size with default value</p>
-                <Input size="lg" placeholder="type your city" defaultValue="Wellington" />
+                <Input className="input-display" size="lg" placeholder="type your city" defaultValue="Wellington" />
                 <p>small size with default value</p>
-                <Input size="sm" placeholder="type your name" />
+                <Input className="input-display" size="sm" placeholder="type your name" />
               </Card>
               <Card title="Other Types" type="inner">
                 <p>Input number</p>
-                <Input type="number" placeholder="type a number" />
+                <Input className="input-display" type="number" placeholder="type a number" />
                 <p>Input Email</p>
-                <Input type="email" emailreminder={emailreminder} placeholder="input an Email address" />
+                <Input className="input-display" type="email" emailreminder={emailreminder} placeholder="input an Email address" />
                 <p>Input Search</p>
-                <Input type="search" placeholder="input search text" />
-                <Input type="search" size="lg" placeholder="input search text" />
+                <Input className="input-display" type="search" placeholder="input search text" />
+                <Input className="input-display" type="search" size="lg" placeholder="input search text" />
               </Card>
 
               {/* <TextArea /> */}

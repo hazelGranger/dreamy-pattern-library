@@ -7,24 +7,16 @@ import Dropdown from 'components/Dropdown';
 
 import 'styles/form.css';
 
-const defaultProps = {
-  emailreminder: ['gmail.com','qq.com']
-}
-
 class Input extends Component{
+
+  static defaultProps = {
+    emailreminder: ['gmail.com','qq.com']
+  }
 
   state = {
     email: "",
     emaillist: [],
     emailReminderVisibility: false
-  }
-
-  componentWillMount() {
-    if (this.props.emailreminder) {
-      this.setState({
-        emaillist: this.renderEmailList()
-      })
-    }
   }
 
   remindEmail= (e)=>{
@@ -49,9 +41,7 @@ class Input extends Component{
 
   renderEmailList= () =>{
     let emailList = [];
-    if (this.props.emailreminder) {
-      emailList = this.props.emailreminder.map((emailname) => this.state.email+"@"+emailname);
-    }
+    emailList = this.props.emailreminder.map((emailname) => this.state.email+"@"+emailname);
     return emailList;
   }
 
@@ -63,7 +53,7 @@ class Input extends Component{
   }
 
   render(){
-    const {type="text" ,placeholder,defaultValue,size,emailreminder} = this.props;
+    const {type="text" ,placeholder,defaultValue,size,emailreminder=['gmail.com','qq.com'],className} = this.props;
     let classNames = "input";
 
     if ( size &&( size==="lg" || size=="sm")) {
@@ -73,7 +63,7 @@ class Input extends Component{
     if (type==="search") {
       return(
         <span className="input-search-container">
-          <input className={classNames} type="text" placeholder={placeholder} defaultValue={defaultValue} />
+          <input className={classNames+ " " + className} type="text" placeholder={placeholder} defaultValue={defaultValue} />
           <Button className="input-search-button" text={<Icon type="search1" />} />
         </span>
       );
@@ -82,13 +72,13 @@ class Input extends Component{
       if (this.state.selectedEmail) {
         return(
           <span className="input-email-container">
-            <input onChange={this.remindEmail} className={classNames} placeholder={placeholder} defaultValue={defaultValue} onchange={this.handleChange} value={this.state.email} type="text"/>
+            <input onChange={this.remindEmail} className={classNames+ " " + className} placeholder={placeholder} defaultValue={defaultValue} onchange={this.handleChange} value={this.state.email} type="text"/>
           </span>
         )
       }else{
         return(
           <span className="input-email-container">
-            <input onChange={this.remindEmail} className={classNames} placeholder={placeholder} defaultValue={defaultValue} value={this.state.email} type="text"/>
+            <input onChange={this.remindEmail} className={classNames+ " " + className} placeholder={placeholder} defaultValue={defaultValue} value={this.state.email} type="text"/>
             <Dropdown className="input-email-reminer" visibility={this.state.emailReminderVisibility} items={this.state.emaillist} handleSelect={this.selectedEmail}   />
           </span>
         );
@@ -96,7 +86,7 @@ class Input extends Component{
 
     } else{
       return(
-        <input className={classNames} type={type} placeholder={placeholder} defaultValue={defaultValue} />
+        <input className={classNames + " " + className} type={type} placeholder={placeholder} defaultValue={defaultValue} />
       );
     }
   }
