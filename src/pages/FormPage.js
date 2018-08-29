@@ -44,13 +44,13 @@ class FormPage extends Component{
                 <p>Radios Horizonal display</p>
                 <div className="input-radio-group input-radio-group-horizonal">
                   <Radio text="A" name="Q1" id="a" />
-                  <Radio text="B" name="Q1" id="b" />
+                  <Radio text="B" name="Q1" id="b" checked={true} />
                   <Radio text="C" name="Q1" id="c" />
                   <Radio text="D" name="Q1" id="d" />
                 </div>
                 <p>Radios Vertical display</p>
                 <div className="input-radio-group input-radio-group-vertical">
-                  <Radio text="I like it a lot!" name="Q2" id="a1" type="primary" />
+                  <Radio text="I like it a lot!" name="Q2" id="a1" type="primary" checked={true} />
                   <Radio text="I like it a little!" name="Q2" id="b1" type="primary" />
                   <Radio text="I have no feeling for it!" name="Q2" id="c1" type="primary" />
                   <Radio text="I dislike it!" name="Q2" id="d1" type="primary" />
@@ -61,16 +61,16 @@ class FormPage extends Component{
               <div className="input-checkbox-group input-checkbox-group-horizonal">
                 <Checkbox text="A" id="a2" name="Q3" />
                 <Checkbox text="B" id="b2" name="Q3" />
-                <Checkbox text="C" id="c2" name="Q3" />
+                <Checkbox text="C" id="c2" name="Q3"  checked={true}/>
                 <Checkbox text="D" id="d2" name="Q3" />
               </div>
               <p>Checkboxes Vertical display</p>
               <div className="input-checkbox-group input-checkbox-group-vertical">
                 <Checkbox text="Apple juice" id="a3" name="Q4" type="primary" />
-                <Checkbox text="Bear glasses" id="b3" name="Q4" type="success" />
+                <Checkbox text="Bear glasses" id="b3" name="Q4" type="success"  checked={true}/>
                 <Checkbox text="Candy can" id="c3" name="Q4" type="warning" />
                 <Checkbox text="Donut boxes" id="d3" name="Q4" type="danger" />
-                <Checkbox text="Eggnog" id="e3" name="Q4" type="info" />
+                <Checkbox text="Eggnog" id="e3" name="Q4" type="info" checked={true} />
               </div>
             </Card>
           </Col>

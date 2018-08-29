@@ -175,11 +175,12 @@
     }
     &::after{
       @include common-input-radio-checkbox-styles(null,null,null);
-      top: -5px;
+      top: -3px;
       left: 2px;
       color: lighten($gray, 10%);
       font-weight: bold;
       background-color: transparent;
+      font-size: 14px;
     }
   }
 }
