@@ -34,7 +34,6 @@ class FormPage extends Component{
                 <Input className="input-display" type="email" emailreminder={emailreminder} placeholder="input an Email address" />
                 <p>Input Search</p>
                 <Input className="input-display" type="search" placeholder="input search text" />
-                <Input className="input-display" type="search" size="lg" placeholder="input search text" />
               </Card>
 
               {/* <TextArea /> */}

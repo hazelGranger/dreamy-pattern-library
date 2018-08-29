@@ -68,3 +68,23 @@
     }
   }
 }
+
+@mixin common-input-radio-checkbox-styles($width,$border-radius,$hasBorder) {
+  display: inline-block;
+  @if $width {
+    width: $width;
+    height: $width;
+  }
+  position: absolute;
+  left: 0;
+  @if $hasBorder {
+    border: 1px solid lighten($gray, 10%);
+  }
+  background-color: $white;
+  margin-left: -1rem;
+  margin-top: 5px;
+  @if $border-radius {
+    border-radius: $border-radius;
+  }
+  transition: $common-transition;
+}

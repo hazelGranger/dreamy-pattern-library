@@ -120,32 +120,16 @@
     padding-left: .5rem;
     &::before{
       content: "";
-      display: inline-block;
-      width: 18px;
-      height: 18px;
-      position: absolute;
-      left: 0;
-      border: 1px solid lighten($gray, 10%);
-      background-color: $white;
-      border-radius: 50%;
-      margin-left: -1rem;
-      margin-top: 5px;
+      @include common-input-radio-checkbox-styles(18px,50%,true);
     }
     &::after{
       content: "";
+      @include common-input-radio-checkbox-styles(12px,50%,false);
       display: inline-block;
-      width: 12px;
-      height: 12px;
-      position: absolute;
       left: 3px;
       top: 0;
-      border: 1px solid #ccc;
       background-color: lighten($gray, 10%);
-      border-radius: 50%;
-      margin-left: -1rem;
-      margin-top: 5px;
       transform: scale(0,0);
-      transition: $common-transition;
     }
   }
   &.input-radio-primary{
@@ -187,28 +171,15 @@
     cursor: pointer;
     &::before{
       content: '';
-      display: inline-block;
-      width: 18px;
-      height: 18px;
-      border: 1px solid #6f6f6f;
-      position: absolute;
-      left: 0;
-      border-radius: $border-radius;
-      margin-left: -1rem;
-      margin-top: 5px;
-      transition: $common-transition;
+      @include common-input-radio-checkbox-styles(18px,$border-radius,true);
     }
     &::after{
-      display: inline-block;
-      width: 18px;
-      height: 18px;
-      position: absolute;
-      left: 0;
-      margin-left: -.9rem;
-      margin-top: 3px;
-      color: #606060;
+      @include common-input-radio-checkbox-styles(null,null,null);
+      top: -5px;
+      left: 2px;
+      color: lighten($gray, 10%);
       font-weight: bold;
-      transition: $common-transition;
+      background-color: transparent;
     }
   }
 }
@@ -221,20 +192,6 @@
 }
 
 @include create-input-checkbox-theme();
-
-// .input-checkbox-primary{
-//     & + label::before{
-//       border-color: $blue;
-//     }
-//     & + label::after{
-//       color: $white;
-//     }
-//     &:checked + label::before{
-//       background: $blue;
-//     }
-// }
-
-
 
 
 // display
