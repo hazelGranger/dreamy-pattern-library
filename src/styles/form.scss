@@ -194,6 +194,18 @@
 
 @include create-input-checkbox-theme();
 
+//Select
+
+.input-select-container{
+  position: relative;
+  display: inline-block;
+
+  & .btn{
+    width: 100%;
+    text-align: left;
+  }
+}
+
 
 // display
 

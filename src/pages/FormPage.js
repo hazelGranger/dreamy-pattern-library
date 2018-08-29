@@ -10,6 +10,8 @@ import Input from 'components/Input';
 import TextArea from 'components/TextArea';
 import Radio from 'components/Radio';
 import Checkbox from 'components/Checkbox';
+import Select from 'components/Select';
+import Dropdown from 'components/Dropdown';
 
 class FormPage extends Component{
   render(){
@@ -34,6 +36,8 @@ class FormPage extends Component{
                 <Input className="input-display" type="email" emailreminder={emailreminder} placeholder="input an Email address" />
                 <p>Input Search</p>
                 <Input className="input-display" type="search" placeholder="input search text" />
+                <p>TextArea</p>
+                <TextArea />
               </Card>
 
               {/* <TextArea /> */}
@@ -73,14 +77,16 @@ class FormPage extends Component{
                 <Checkbox text="Eggnog" id="e3" name="Q4" type="info" checked={true} />
               </div>
             </Card>
-          </Col>
-          <Col span={6}>
-
-          </Col>
-          <Col span={6}>
             <Card title="Select">
-
+              <Select className="input-display" width={220} theme="success" text="choose the flower you like" items={['Lily','Tulip','Fritillaria','Cardiocrinum']} />
+              <Select className="input-display" width={180}  text="the drink you like?" items={['Coffee','Tea','Milk','Cola','Lemonade']} />
             </Card>
+          </Col>
+          <Col span={6}>
+
+          </Col>
+          <Col span={6}>
+
           </Col>
         </Row>
       </Page>
