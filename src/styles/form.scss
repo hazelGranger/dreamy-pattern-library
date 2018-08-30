@@ -51,18 +51,16 @@
   height: $input-height*(2/3);
 }
 
-// .input-email-reminer{
-//   position: absolute;
-//   top: 100%;
-//   left: 0;
-//   width: 100%;
-//   padding: $common-padding;
-//   background: $white;
-//   box-shadow: $common-boxshadow;
-//   border: $input-border;
-//   border-radius: $border-radius;
-//   z-index: 1;
-// }
+// TextArea
+
+.textarea{
+  width: 100%;
+  padding: $common-padding;
+  border: $input-border;
+  border-radius: $border-radius;
+  box-shadow: $input-box-shadow;
+  font-size: $input-fontsize;
+}
 
 //Dropdown
 .dropdown-conatainer{
@@ -104,10 +102,6 @@
   &.input-radio-group-vertical{
     flex-direction: column;
   }
-}
-
-.input-radio-container{
-
 }
 
 .input-radio{

@@ -36,8 +36,8 @@ class FormPage extends Component{
                 <Input className="input-display" type="email" emailreminder={emailreminder} placeholder="input an Email address" />
                 <p>Input Search</p>
                 <Input className="input-display" type="search" placeholder="input search text" />
-                <p>TextArea</p>
-                <TextArea />
+                <p>Autosized TextArea</p>
+                <TextArea minRows={4} maxRows={7}> I am an Autosized TextArea. Input what you want:</TextArea>
               </Card>
 
               {/* <TextArea /> */}
