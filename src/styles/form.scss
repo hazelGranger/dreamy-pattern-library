@@ -198,6 +198,16 @@
     width: 100%;
     text-align: left;
   }
+  & .icon{
+    position: absolute;
+    color: $white;
+    line-height: 1;
+    font-weight: 100;
+    font-size: 12px;
+    top: 50%;
+    right: 12px;
+    margin-top: -6px;
+  }
 }
 
 

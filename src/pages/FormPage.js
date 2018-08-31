@@ -78,7 +78,7 @@ class FormPage extends Component{
               </div>
             </Card>
             <Card title="Select">
-              <Select className="input-display" width={220} theme="success" text="choose the flower you like" items={['Lily','Tulip','Fritillaria','Cardiocrinum']} />
+              <Select className="input-display" width={240} theme="success" text="choose the flower you like" items={['Lily','Tulip','Fritillaria','Cardiocrinum']} />
               <Select className="input-display" width={180}  text="the drink you like?" items={['Coffee','Tea','Milk','Cola','Lemonade']} />
             </Card>
           </Col>
