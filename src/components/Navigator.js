@@ -57,7 +57,7 @@ class Navigator extends Component {
             <Link to="/button">Data Display</Link>
             <ul className="subnav">
               <li className="subnav__item">
-                <Link to="/button">Collapse</Link>
+                <Link to="/collapse">Collapse</Link>
               </li>
               <li className="subnav__item">
                 <Link to="/button">Tabs</Link>

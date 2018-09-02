@@ -8,6 +8,7 @@ import GridPage from 'pages/GridPage';
 import CardPage from 'pages/CardPage';
 import IconPage from 'pages/IconPage';
 import FormPage from 'pages/FormPage';
+import CollapsePage from 'pages/CollapsePage';
 
 class Main extends Component {
   render() {
@@ -20,6 +21,7 @@ class Main extends Component {
           <Route path="/card" component={CardPage} />
           <Route path="/icon" component={IconPage} />
           <Route path="/form" component={FormPage} />
+          <Route path="/collapse" component={CollapsePage} />
         </main>
       </Router>
     );

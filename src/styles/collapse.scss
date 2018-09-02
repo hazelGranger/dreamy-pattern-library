@@ -1,0 +1,34 @@
+@import "_variables";
+@import "_color";
+@import "_mixin";
+
+.collapse{
+  // border-radius: $border-radius;
+  // background-color: $white;
+}
+
+.collapse_item{
+  border-radius: $border-radius;
+  background-color: $white;
+  margin-bottom: $common-margin;
+}
+
+.collapse__item-header{
+  border-bottom: 1px solid darken($white,20%);
+  padding: $common-padding;
+  position: relative;
+  &::after{
+    content: '\e620';
+    font-family: icon;
+    font-weight: 300;
+    font-size: 12px;
+    position: absolute;
+    right: 15px;
+    //color: lighten($gray,20%);
+    display: inline-block;
+  }
+}
+
+.collapse__item-body{
+  padding: $common-padding;
+}
