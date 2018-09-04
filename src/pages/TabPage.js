@@ -21,7 +21,13 @@ class CollapsePage extends  Component{
             </Tab>
           </Col>
           <Col span={6}>
-
+            <Card title="Tabs inside the card">
+              <Tab defaultActiveKey={2}>
+                <TabItem title="Tab 1" id={1}>AAA</TabItem>
+                <TabItem title="Tab 2" id={2}>BBB</TabItem>
+                <TabItem title="Tab 3" id={3}>CCC</TabItem>
+              </Tab>
+            </Card>
           </Col>
         </Row>
       </Page>

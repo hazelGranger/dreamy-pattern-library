@@ -39,3 +39,19 @@
     display: block;
   }
 }
+
+// Tabs in the card
+
+.card{
+  .tab__header{
+    .tab__header__item{
+      border-bottom: 1px solid #ddd;
+      margin-right: 0;
+      &.active{
+        border: 1px solid #ddd;
+        border-bottom-color: $white;
+        margin-bottom: -1px;
+      }
+    }
+  }
+}
