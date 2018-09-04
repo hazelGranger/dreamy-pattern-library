@@ -1,0 +1,41 @@
+@import "_variables";
+@import "_color";
+@import "_mixin";
+
+.tab{
+
+}
+
+.tab__header{
+  position: relative;
+  overflow: hidden;
+}
+
+.tab__header__item{
+  float: left;
+  background-color: $white;
+  padding: 10px;
+  margin-bottom: -1px;
+  border-radius: 3px 3px 0 0;
+  line-height: 1;
+  margin-right: 2px;
+  cursor: pointer;
+  border-bottom: none;
+  &.active{
+    border-bottom: 1px solid transparent;
+    margin-bottom: 0;
+  }
+}
+
+.tab__body{
+  border-radius: 0 0 3px 3px;
+  background-color: #fff;
+  padding: 12px 17px;
+}
+
+.tab__body__item{
+  display: none;
+  &.active{
+    display: block;
+  }
+}

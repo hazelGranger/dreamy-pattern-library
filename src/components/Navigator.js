@@ -60,7 +60,7 @@ class Navigator extends Component {
                 <Link to="/collapse">Collapse</Link>
               </li>
               <li className="subnav__item">
-                <Link to="/button">Tabs</Link>
+                <Link to="/tabs">Tabs</Link>
               </li>
               <li className="subnav__item">
                 <Link to="/button">Table</Link>
