@@ -7,13 +7,13 @@
   // background-color: $white;
 }
 
-.collapse_item{
+.collapse__item{
   border-radius: $border-radius;
   background-color: $white;
   margin-bottom: $common-margin;
 }
 
-.collapse_item-active{
+.collapse__item-active{
   & .collapse__item-header::after{
     transform: rotate(-90deg);
   }
@@ -52,22 +52,4 @@
   border-top: 1px solid darken($white,20%);
   padding: $common-padding;
   overflow: hidden;
-}
-
-.collapse-enter {
-  opacity: 0.01;
-}
-
-.collapse-enter.collapse-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
-}
-
-.collapse-leave {
-  opacity: 1;
-}
-
-.collapse-leave.collapse-leave-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in;
 }

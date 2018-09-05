@@ -14,18 +14,18 @@ class CollapsePage extends  Component{
         <Row>
           <Col span={6}>
             <h3>Default Collapse</h3>
-              <Collapse activeKey={2}>
-                <Panel title="panel A" key={1}>1</Panel>
-                <Panel title="panel B" key={2}>2</Panel>
-                <Panel title="panel C" key={3}>3</Panel>
+              <Collapse activeId={[1,3]}>
+                <Panel title="panel A" id={1}>AAA</Panel>
+                <Panel title="panel B" id={2}>BBB</Panel>
+                <Panel title="panel C" id={3}>CCC</Panel>
               </Collapse>
           </Col>
           <Col span={6}>
             <h3>Accordion Collapse</h3>
-              <Collapse type="accordion" activeKey={2}>
-                <Panel title="panel A" id={1}>1</Panel>
-                <Panel title="panel B" id={2}>2</Panel>
-                <Panel title="panel C" id={3}>3</Panel>
+              <Collapse type="accordion" activeId={[2]}>
+                <Panel title="panel 1" id={1}>1111</Panel>
+                <Panel title="panel 2" id={2}>22222</Panel>
+                <Panel title="panel 3" id={3}>33333</Panel>
               </Collapse>
           </Col>
         </Row>
