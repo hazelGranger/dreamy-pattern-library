@@ -10,6 +10,7 @@ import IconPage from 'pages/IconPage';
 import FormPage from 'pages/FormPage';
 import CollapsePage from 'pages/CollapsePage';
 import TabPage from 'pages/TabPage';
+import TablePage from 'pages/TablePage';
 
 class Main extends Component {
   render() {
@@ -24,6 +25,7 @@ class Main extends Component {
           <Route path="/form" component={FormPage} />
           <Route path="/collapse" component={CollapsePage} />
           <Route path="/tabs" component={TabPage} />
+          <Route path="/table" component={TablePage} />
         </main>
       </Router>
     );

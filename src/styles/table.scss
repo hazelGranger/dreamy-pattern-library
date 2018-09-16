@@ -1,0 +1,44 @@
+@import "_variables";
+@import "_color";
+
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  background: transparent;
+}
+
+.table{
+  width: 100%;
+  max-width: 100%;
+  color: #606060;
+}
+
+.table-borderer{
+  border: 1px solid #ddd;
+  th, td{
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+}
+
+.table-stripped{
+  &>tbody>tr:nth-of-type(odd){
+    background: #f9f9f9;
+  }
+
+  td{
+    padding: 8px;
+    border-top: 1px solid #ddd;
+  }
+}
+
+.table-hovered{
+  &>tbody>tr:hover{
+    background: #f9f9f9;
+  }
+
+  td{
+    padding: 8px;
+    border-top: 1px solid #ddd;
+  }
+}

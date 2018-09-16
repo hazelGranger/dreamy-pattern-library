@@ -63,7 +63,7 @@ class Navigator extends Component {
                 <Link to="/tabs">Tabs</Link>
               </li>
               <li className="subnav__item">
-                <Link to="/button">Table</Link>
+                <Link to="/table">Table</Link>
               </li>
               <li className="subnav__item">
                 <Link to="/button">Tooltip</Link>
