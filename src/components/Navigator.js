@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import 'styles/navigator.scss';
+import 'styles/navigator.css';
 
 class Navigator extends Component {
   render(){
@@ -66,7 +66,7 @@ class Navigator extends Component {
                 <Link to="/table">Table</Link>
               </li>
               <li className="subnav__item">
-                <Link to="/button">Tooltip</Link>
+                <Link to="/tooltip">Tooltip</Link>
               </li>
             </ul>
           </li>

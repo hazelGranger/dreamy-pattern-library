@@ -11,6 +11,7 @@ import FormPage from 'pages/FormPage';
 import CollapsePage from 'pages/CollapsePage';
 import TabPage from 'pages/TabPage';
 import TablePage from 'pages/TablePage';
+import TooltipPage from 'pages/TooltipPage';
 
 class Main extends Component {
   render() {
@@ -26,6 +27,7 @@ class Main extends Component {
           <Route path="/collapse" component={CollapsePage} />
           <Route path="/tabs" component={TabPage} />
           <Route path="/table" component={TablePage} />
+          <Route path="/tooltip" component={TooltipPage} />
         </main>
       </Router>
     );

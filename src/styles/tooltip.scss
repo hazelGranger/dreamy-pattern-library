@@ -1,0 +1,122 @@
+@import "_variables";
+
+.tooltip{
+  position: relative;
+  display: inline-block;
+  &:hover .tooltip__content{
+    display: block;
+    opacity: 1;
+  }
+}
+
+.tooltip__content{
+  position: absolute;
+  width: max-content;
+  background: $tooltipBg;
+  color: #fff;
+  padding: $tooltipPadding;
+  line-height: 1;
+  font-size: 10px;
+  border-radius: 3px;
+  display: none;
+  opacity: 0;
+  transition: opacity ease-in-out .3s;
+}
+
+.tooltip__content-topleft,.tooltip__content-top,.tooltip__content-topright{
+  top: 0;
+  margin-top: -30px;
+  .tooltip__arrow{
+    bottom: -($tooltipPadding - 1px);
+    border-top-color: $tooltipBg;
+  }
+}
+
+.tooltip__content-bottomleft,.tooltip__content-bottom,.tooltip__content-bottomright{
+  bottom: 0;
+  margin-bottom: -30px;
+  .tooltip__arrow{
+    border-width: 0 $tooltipPadding $tooltipPadding;
+    top: -($tooltipPadding - 1px);
+    border-bottom-color: $tooltipBg;
+  }
+}
+
+.tooltip__arrow{
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-width: $tooltipPadding $tooltipPadding 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.tooltip__content-topleft{
+  left: 0;
+  .tooltip__arrow{
+    left: $tooltipPadding;
+  }
+}
+
+.tooltip__content-top{
+  left: 50%;
+  transform: translate(-50%);
+  .tooltip__arrow{
+    left: 50%;
+    margin-left: -$tooltipPadding;
+  }
+}
+
+.tooltip__content-topright{
+  right: 0;
+  .tooltip__arrow{
+    right: $tooltipPadding;
+  }
+}
+
+.tooltip__content-bottomleft{
+  left: 0;
+  .tooltip__arrow{
+    left: $tooltipPadding;
+  }
+}
+
+.tooltip__content-bottom{
+  left: 50%;
+  transform: translate(-50%);
+  .tooltip__arrow{
+    left: 50%;
+    margin-left: -$tooltipPadding;
+  }
+}
+
+.tooltip__content-bottomright{
+  right: 0;
+  .tooltip__arrow{
+    right: $tooltipPadding;
+  }
+}
+
+.tooltip__content-left{
+  top: 50%;
+  transform: translate(0,-50%);
+  right: 100%;
+  margin-right: $tooltipPadding;
+  .tooltip__arrow{
+    border-width: $tooltipPadding 0 $tooltipPadding $tooltipPadding;
+    right: -($tooltipPadding - 1px);
+    border-left-color: $tooltipBg;
+  }
+}
+
+.tooltip__content-right{
+  top: 50%;
+  transform: translate(0,-50%);
+  left: 100%;
+  margin-left: $tooltipPadding;
+  .tooltip__arrow{
+    border-width: $tooltipPadding $tooltipPadding $tooltipPadding 0;
+    left: -($tooltipPadding - 1px);
+    border-right-color: $tooltipBg;
+  }
+}

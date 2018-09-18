@@ -58,3 +58,7 @@ $input-fontsize: 14px;
 $input-height: 36px;
 $input-theme-color: ('primary': $blue, 'success': $green, 'warning': $yellow, 'danger': $red, 'info': $cyan);
 $themes: primary success warning danger info;
+
+// Tooltip
+$tooltipPadding: 5px;
+$tooltipBg: rgba(0,0,0,.7);
